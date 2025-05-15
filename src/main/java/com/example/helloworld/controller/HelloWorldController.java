@@ -12,9 +12,27 @@ public class HelloWorldController {
 	public String hello() {
 		return "<marquee>Hello World!</marquee>";
 	}
+
+	// http://localhost:8080/hello/bsm
+	@GetMapping("/bsm")
+	public String bsm() {
+		return "<h1>Lista de BSM's da Generation Brasil:</h1>"
+				+ "<ul>"
+				+ "<li>Mentalidade de Crescimento</li>"
+				+ "<li>Orientação ao Futuro</li>"
+				+ "<li>Persistência</li>"
+				+ "<li>Responsabilidade Pessoal</li>"
+				+ "</ul>";
+	}
 	
-	@GetMapping("/turma")
-	public String turmaJava82() {
-		return "<h1>A Turma Java 82 é TOP!</h1>";
+	// http://localhost:8080/hello/objetivos
+	@GetMapping("/objetivos")
+	public String objetivos() {
+		return "<h1>Lista objetivos de aprendizagem da semana:</h1>"
+				+ "<ul>"
+				+ "<li>Escrever doc de anotações sobre pontos chave de MySQL</li>"
+				+ "<li>Estudar mais sobre SpringBoot</li>"
+				+ "<li>Escrever doc de anotações sobre SpringBoot</li>"
+				+ "</ul>";
 	}
 }
